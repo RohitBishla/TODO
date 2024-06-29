@@ -1,0 +1,113 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center; /* Center align the text */
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.logo-button {
+  text-decoration: none;
+  color: inherit;
+}
+
+form {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 20%;
+  border-radius: 10px; /* More rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: inline-block; /* Center the form */
+  text-align: left; /* Align form content to the left */
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input, form select {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0 10px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  width: auto; /* Adjusted width */
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 20px; /* More rounded corners */
+  cursor: pointer;
+  display: inline-block;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.task-item {
+  background: #fff;
+  padding: 20px;
+  margin: 10px auto;
+  width: 30%;
+  border-radius: 10px; /* More rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  max-width: 600px; /* Limit the width */
+}
+
+.task-item h3 {
+  margin: 0;
+}
+
+.task-item p {
+  margin: 5px 0;
+}
+
+.task-item button {
+  width: auto; /* Adjusted width */
+  background-color: #f44336;
+  margin-right: 10px;
+  border-radius: 20px; /* More rounded corners */
+}
+
+.task-item button:last-child {
+  background-color: #4CAF50;
+}
+
+.task-item button:hover {
+  opacity: 0.8;
+}
+
+.add-task-button {
+  display: block;
+  width: 200px;
+  margin: 20px auto;
+  background-color: #4CAF50;
+  border-radius: 20px; /* More rounded corners */
+}
+
+.add-task-button:hover {
+  background-color: #45a049;
+}

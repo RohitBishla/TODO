@@ -1,0 +1,29 @@
+#---
+#template: Hello 2, %s!
+#defaultName: Stranger3
+server:
+  type: simple
+  applicationContextPath: /api
+  adminContextPath: /admin
+
+database:
+  driverClass: com.mysql.cj.jdbc.Driver
+  user: todo_user
+  password: todo_password
+  url: jdbc:mysql://db:3306/todo
+  properties:
+    charSet: UTF-8
+
+#database:
+#  driverClass: com.mysql.cj.jdbc.Driver
+#  user: root
+#  password: bishla123
+#  url: jdbc:mysql://localhost:3306/todo
+#  properties:
+#    charSet: UTF-8
+#    hibernate.dialect: org.hibernate.dialect.MySQL8Dialect
+#    hibernate.show_sql: true
+#logging:
+#  level: INFO
+#  loggers:
+#    org.example: DEBUG
