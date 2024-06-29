@@ -1,6 +1,5 @@
-# true
 
-How to start the true application
+How to start the todo application
 ---
 
 1. Run `mvn clean install` to build your application
@@ -11,3 +10,8 @@ Health Check
 ---
 
 To see your applications health enter url `http://localhost:8081/healthcheck`
+
+Start Using Docker
+---
+
+Run `docker-compose up --build`

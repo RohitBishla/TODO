@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.2
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword  # Set root password
+      MYSQL_DATABASE: todo
+      MYSQL_USER: todo_user              # Non-root user
+      MYSQL_PASSWORD: todo_password      # Password for non-root user
+    ports:
+      - "3307:3306"  # Use a different host port if 3306 is in use
+    volumes:
+      - ./mysql-init:/docker-entrypoint-initdb.d
+
+  backend:
+    build: ./backend  # Assuming your backend Dockerfile is in ./backend directory
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      DB_URL: jdbc:mysql://db:3306/todo
+      DB_USER: todo_user                 # Non-root user to be used by the application
+      DB_PASSWORD: todo_password         # Password for non-root user
+
+  frontend:
+    build: ./frontend  # Assuming your frontend Dockerfile is in ./frontend directory
+    ports:
+      - "3000:3000"  # Map port 3000 of the container to port 3000 of the host
+    depends_on:
+      - backend
+    environment:
+      - CHOKIDAR_USEPOLLING=true  # Necessary for hot reloading in some environments
